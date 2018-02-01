@@ -7,6 +7,9 @@
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;NETSTANDARD2_0;FILESYSTEM;DEFAULTUDPCLIENT;DEFAULTWEBSOCKET;MSTRYBUFFER;UDPDISPOSE;NETSTANDARD2_0</DefineConstants>
+  </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Discord.Net.Core\Discord.Net.Core.csproj" />
     <ProjectReference Include="..\Discord.Net.Rest\Discord.Net.Rest.csproj" />
