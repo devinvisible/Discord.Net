@@ -124,6 +124,7 @@ namespace Discord.API
                 _loginCancelToken?.Dispose();
                 _loginCancelToken = new CancellationTokenSource();
 
+                AuthTokenType = TokenType.User;
                 AuthToken = null;
                 await RequestQueue.SetCancelTokenAsync(_loginCancelToken.Token).ConfigureAwait(false);
                 RestClient.SetCancelToken(_loginCancelToken.Token);

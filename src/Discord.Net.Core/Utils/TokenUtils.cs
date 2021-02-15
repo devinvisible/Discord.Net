@@ -175,6 +175,9 @@ namespace Discord
                         throw new ArgumentException(message: "The Bot token was invalid. " +
                             "Ensure that the Bot Token provided is not an OAuth client secret.", paramName: nameof(token));
                     break;
+                case TokenType.User:
+                    // we bad boys... no verification
+                    break;
                 default:
                     // All unrecognized TokenTypes (including User tokens) are considered to be invalid.
                     throw new ArgumentException(message: "Unrecognized TokenType.", paramName: nameof(token));
